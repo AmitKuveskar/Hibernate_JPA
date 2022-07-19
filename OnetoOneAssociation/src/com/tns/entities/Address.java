@@ -10,20 +10,22 @@ import javax.persistence.Id;
 
 @Entity
 public class Address implements Serializable {
+
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	
+	@Column(name="ADDRESS_ID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int addressId;
-	
+	@Column(name="ADDRESS_STREET")
 	private String street;
-	
+	@Column(name="ADDRESS_CITY")
 	private String city;
-	
+	@Column(name="ADDRESS_STATE")
 	private String state;
-	
+	@Column(name="ADDRESS_ZIPCODE")
 	private String zipCode;
+	
 	public int getAddressId() {
 		return addressId;
 	}
@@ -56,5 +58,4 @@ public class Address implements Serializable {
 	}
 	
 	
-
 }
